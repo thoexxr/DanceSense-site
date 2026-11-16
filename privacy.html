@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DanceSense 舞蹈标准度测试 · 隐私政策</title>
+<style>
+  :root {
+    color-scheme: light;
+    --accent: #7c3aed;
+    --accent-soft: #f3e8ff;
+    --ink: #1c1e21;
+    --muted: #65676b;
+    --line: #e7e9ec;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #f6f7f9; color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans",
+                 "Noto Sans Thai", "Apple SD Gothic Neo", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.78; -webkit-font-smoothing: antialiased;
+  }
+  .page { max-width: 760px; margin: 0 auto; padding: 24px 18px 72px; }
+  header { margin-bottom: 18px; }
+  .brand { display: flex; align-items: center; gap: 10px; }
+  .logo {
+    width: 40px; height: 40px; border-radius: 12px; flex: none;
+    background: linear-gradient(135deg, #a855f7, #7c3aed);
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 20px; font-weight: 700;
+  }
+  h1 { font-size: 24px; margin: 0; letter-spacing: .2px; }
+  .sub { color: var(--muted); font-size: 13px; margin-top: 6px; }
+  .langbar { display: flex; gap: 8px; margin: 18px 0 20px; }
+  .langbar button {
+    font: inherit; font-size: 13px; font-weight: 600; cursor: pointer;
+    padding: 7px 16px; border-radius: 999px; border: 1px solid var(--line);
+    background: #fff; color: var(--muted);
+  }
+  .langbar button.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.06); font-size: 15px;
+  }
+  .hl { background: var(--accent-soft); border-radius: 8px; padding: 2px 7px; font-weight: 600; }
+  h2 {
+    font-size: 18px; margin: 34px 0 8px; padding-left: 11px;
+    border-left: 4px solid var(--accent);
+  }
+  h3 { font-size: 15px; margin: 18px 0 4px; }
+  p, li { font-size: 15px; }
+  ul { padding-left: 22px; margin: 8px 0; }
+  li { margin: 5px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 14px; }
+  th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; width: 30%; }
+  a { color: var(--accent); }
+  .note { color: var(--muted); font-size: 13px; }
+  footer { margin-top: 46px; color: #8a8d91; font-size: 12px; text-align: center; }
+  .en { display: none; }
+  .nav { display: flex; gap: 14px; margin-top: 10px; font-size: 13px; }
+  .nav a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  .footlink { margin-top: 40px; text-align: center; font-size: 13px; }
+  .footlink a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  body[data-lang="en"] .zh { display: none; }
+  body[data-lang="en"] .en { display: block; }
+</style>
+</head>
+<body data-lang="zh">
+<div class="page">
+
+  <header>
+    <div class="brand">
+      <div class="logo">D</div>
+      <div>
+        <h1>DanceSense 舞蹈标准度测试</h1>
+        <div class="sub">隐私政策 · Privacy Policy · 生效日期 2026 年 11 月 16 日</div>
+        <div class="nav"><a href="./index.html">首页</a><a href="./support.html">技术支持 · Support</a></div>
+      </div>
+    </div>
+    <div class="langbar">
+      <button class="active" data-set="zh">中文</button>
+      <button data-set="en">English</button>
+    </div>
+  </header>
+
+  <!-- ==================== 中文 ==================== -->
+  <div class="zh">
+    <div class="card">
+      <p><span class="hl">我们不收集、不存储、不上传你的任何个人数据。</span>
+      本 App 的全部核心功能（人体姿态提取、动作对齐、评分、舞种识别）都在你的设备本地完成，视频不会离开你的设备。</p>
+    </div>
+
+    <h2>1. 我们收集哪些信息</h2>
+    <p><b>不收集。开发者没有服务器，也不存在任何用户账号体系。</b>具体而言：</p>
+    <table>
+      <tr><th>你选择的内容</th><td>你在「标准度测试」或「舞蹈视频分析」中选取的视频，仅在本机被系统 Vision 框架读取并提取人体骨架，分析完成后即释放；不会上传、不会备份到我们的服务器，开发者也无法获取。</td></tr>
+      <tr><th>骨架与评分数据</th><td>人体关节坐标、关节误差、评分、动作分段结果仅存在于内存中，用于当次计算与界面显示，不写入任何可识别个人身份的持久化存储，也不与任何第三方共享。</td></tr>
+      <tr><th>试用状态</th><td>免费试用的起始时间保存在你设备本地的 UserDefaults 中，并同时写入一份到系统钥匙串（Keychain）：启动时取两者中更早的时间，因此卸载重装不会重置试用期。该记录只是一个时间戳，不含任何身份信息。</td></tr>
+      <tr><th>练习记录</th><td>你完成的分析结果摘要（分数、日期、最差关节名称、是否内置示例）保存在本机的 Application Support 目录下，仅用于「练习记录」列表和进步曲线；可在记录页逐条删除，卸载 App 后随之清除。</td></tr>
+      <tr><th>界面语言偏好</th><td>你在 App 内选择的语言只保存在你设备本地，用于下次打开时保持一致。</td></tr>
+      <tr><th>购买记录</th><td>一次性买断（$0.99，无订阅、无自动续费）由 Apple 通过你的 App Store 账号处理。支付信息 Apple 不会向我们披露，我们仅能通过 StoreKit 读取「是否已购买」这一状态。</td></tr>
+    </table>
+
+    <h2>2. 权限使用</h2>
+    <ul>
+      <li><b>照片 / 视频选择器</b>：仅在你主动点击「选择视频」并挑选视频时访问那一个文件。使用的是系统 PhotosPicker，App 不会读取你相册里的其他内容，也不会请求「照片」系统权限弹窗。</li>
+      <li>本 App <b>不申请</b>定位、通讯录、麦克风、相机、日历、健康数据等任何权限。</li>
+      <li>App 内置的示范视频随 App 一起分发，不涉及你的任何个人内容。</li>
+    </ul>
+
+    <h2>3. 你的数据在哪里被处理</h2>
+    <ul>
+      <li><b>全部在设备上。</b>人体姿态由 Apple 系统 Vision 框架（<code>VNDetectHumanBodyPoseRequest</code>）提取；舞种与动作识别使用随 App 内置的 Core ML 模型在本机推理；动作对齐（DTW）、误差计算与评分同样在设备 CPU 上完成。</li>
+      <li><b>没有自有网络请求。</b>除 Apple 的 App Store 内购流程外，App 不向任何域名发送数据，也不使用第三方分析、广告或统计 SDK。</li>
+      <li><b>卸载即清除。</b>卸载 App 会清除全部本地数据（包括练习记录与语言偏好）；唯一例外是系统钥匙串里的试用起始时间戳，它保留下来只为让下次安装继续按原试用期计算，不含任何身份信息。</li>
+    </ul>
+
+    <h2>4. 第三方服务</h2>
+    <p>本 App 仅使用 Apple 提供的系统能力：</p>
+    <ul>
+      <li><b>Apple Vision</b>：在设备上提取人体姿态。</li>
+      <li><b>Core ML</b>：运行随 App 内置的舞种 / 动作识别模型。</li>
+      <li><b>StoreKit（App Store 内购）</b>：处理一次性买断交易，其数据处理适用 <a href="https://www.apple.com/legal/privacy/szh/">Apple 隐私政策</a>。</li>
+    </ul>
+    <p>除上述 Apple 系统能力外，没有其他第三方 SDK，也没有广告与追踪。</p>
+
+    <h2>5. 免费试用与一次性买断</h2>
+    <ul>
+      <li>首次打开 App 可免费试用 <b>3 天</b>，启动页显示实时倒计时。</li>
+      <li>试用结束后可一次性买断 <b>$0.99</b> 解锁全部功能，<b>无订阅、无自动续费</b>，也不会自动扣费。</li>
+      <li>购买与恢复购买均通过 Apple App Store 完成；若在其它设备购买，可在买断页点「恢复购买」。</li>
+    </ul>
+
+    <h2>6. 儿童隐私</h2>
+    <p>本 App 不收集任何用户数据，不含账号体系、社交、聊天或公开分享功能，因此不会收集儿童的个人信息。App Store 年龄分级为 4+。</p>
+
+    <h2>7. 政策更新</h2>
+    <p>如本政策发生实质性变更，我们会在此页面更新内容并修改顶部的生效日期。</p>
+
+  </div>
+
+  <!-- ==================== English ==================== -->
+  <div class="en">
+    <div class="card">
+      <p><span class="hl">We do not collect, store, or upload any of your personal data.</span>
+      Every core feature of the app — body pose extraction, motion alignment, scoring, dance-style recognition — runs entirely on your device. Your videos never leave it.</p>
+    </div>
+
+    <h2>1. What we collect</h2>
+    <p><b>Nothing. There is no server and no user account system.</b> Specifically:</p>
+    <table>
+      <tr><th>Content you select</th><td>The video you pick in <i>Accuracy Test</i> or <i>Dance Video Analysis</i> is read on-device by Apple's Vision framework to extract body poses and is released as soon as the analysis finishes. It is never uploaded, never backed up on our servers, and never visible to the developer.</td></tr>
+      <tr><th>Pose &amp; scoring data</th><td>Joint coordinates, joint errors, scores and segment breakdowns exist only in memory, for the current calculation and on-screen display. They are never written to any persistent store that could identify you, and never shared with third parties.</td></tr>
+      <tr><th>Trial state</th><td>The start time of your free trial is stored in this device's local UserDefaults and mirrored once into the system Keychain. On launch the app takes the earlier of the two, so reinstalling the app does not restart the trial. The record is a bare timestamp and contains no identifying information.</td></tr>
+      <tr><th>Practice history</th><td>Compact summaries of the analyses you run (score, date, names of the worst joints, whether the clip was a built-in demo) are stored in the app's local Application Support folder, used only for the Practice History list and the progress chart. You can delete entries one by one in the app; uninstalling the app removes them.</td></tr>
+      <tr><th>Language preference</th><td>The interface language you pick is stored on your device so it stays the same next time you open the app.</td></tr>
+      <tr><th>Purchase state</th><td>The one-time purchase ($0.99 — no subscription, no auto-renewal) is processed by Apple through your App Store account. Apple does not disclose payment details to us; through StoreKit we can only read whether the purchase exists.</td></tr>
+    </table>
+
+    <h2>2. Permissions</h2>
+    <ul>
+      <li><b>Photos / video picker</b> — accessed only when you tap “Choose Video” and pick a file. The app uses the system PhotosPicker, so it cannot read anything else in your library and no Photos permission prompt appears.</li>
+      <li>The app requests <b>no</b> location, contacts, microphone, camera, calendar, or health permissions.</li>
+      <li>The demo clips shipped inside the app are part of the app bundle and involve none of your personal content.</li>
+    </ul>
+
+    <h2>3. Where your data is processed</h2>
+    <ul>
+      <li><b>Entirely on your device.</b> Body poses are extracted with Apple's system Vision framework (<code>VNDetectHumanBodyPoseRequest</code>); dance-style and movement recognition run from the Core ML models bundled in the app; DTW alignment, error computation and scoring also run on the device CPU.</li>
+      <li><b>No network calls of our own.</b> Apart from Apple's App Store in-app purchase flow, the app sends no data to any domain and uses no third-party analytics, advertising, or tracking SDK.</li>
+      <li><b>Uninstalling removes local data.</b> Uninstalling the app deletes all local data, including practice history and the language preference. The one exception is the trial start timestamp kept in the system Keychain, which survives only so the next install continues the same trial period; it contains no identifying information.</li>
+    </ul>
+
+    <h2>4. Third-party services</h2>
+    <p>The app uses only Apple system capabilities:</p>
+    <ul>
+      <li><b>Apple Vision</b> — on-device body pose extraction.</li>
+      <li><b>Core ML</b> — runs the bundled dance-style / movement models.</li>
+      <li><b>StoreKit (App Store in-app purchase)</b> — handles the one-time purchase; its data processing follows the <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>.</li>
+    </ul>
+    <p>Beyond those Apple system capabilities there are no other third-party SDKs, no ads, and no tracking.</p>
+
+    <h2>5. Free trial and one-time purchase</h2>
+    <ul>
+      <li>A <b>3-day free trial</b> starts the first time you open the app, with a live countdown on the launch screen.</li>
+      <li>When the trial ends you can unlock everything with a <b>one-time $0.99 purchase</b> — <b>no subscription, no auto-renewal</b>, and nothing is charged automatically.</li>
+      <li>Purchases and restorations are handled by the App Store; if you bought on another device, tap “Restore Purchases” on the unlock page.</li>
+    </ul>
+
+    <h2>6. Children's privacy</h2>
+    <p>The app collects no user data and contains no accounts, social features, chat, or public sharing, so no children's information is ever collected. Its App Store age rating is 4+.</p>
+
+    <h2>7. Policy updates</h2>
+    <p>If this policy changes materially, we will update this page and the effective date shown at the top.</p>
+
+      </div>
+
+  <div class="footlink"><a href="./index.html">首页 · Home</a> · <a href="./support.html">技术支持 · Support</a></div>
+  <footer>© 2026 Xingran Xu · DanceSense 舞蹈标准度测试 / Dance Accuracy Test</footer>
+</div>
+
+<script>
+  const body = document.body;
+  document.querySelectorAll('.langbar button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      body.dataset.lang = btn.dataset.set;
+      document.querySelectorAll('.langbar button').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      try { localStorage.setItem('dsPrivacyLang', btn.dataset.set); } catch (e) {}
+    });
+  });
+  try {
+    const saved = localStorage.getItem('dsPrivacyLang');
+    if (saved === 'en' || saved === 'zh') {
+      body.dataset.lang = saved;
+      document.querySelectorAll('.langbar button').forEach(function (b) {
+        b.classList.toggle('active', b.dataset.set === saved);
+      });
+    }
+  } catch (e) {}
+</script>
+</body>
+</html>
