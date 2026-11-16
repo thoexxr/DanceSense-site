@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DanceSense 舞蹈标准度测试</title>
+<style>
+  :root {
+    color-scheme: light;
+    --accent: #7c3aed;
+    --accent-soft: #f3e8ff;
+    --ink: #1c1e21;
+    --muted: #65676b;
+    --line: #e7e9ec;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #f6f7f9; color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans",
+                 "Noto Sans Thai", "Apple SD Gothic Neo", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.78; -webkit-font-smoothing: antialiased;
+  }
+  .page { max-width: 760px; margin: 0 auto; padding: 40px 18px 72px; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .logo {
+    width: 52px; height: 52px; border-radius: 16px; flex: none;
+    background: linear-gradient(135deg, #a855f7, #7c3aed);
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 26px; font-weight: 700;
+  }
+  h1 { font-size: 26px; margin: 0; letter-spacing: .2px; }
+  .sub { color: var(--muted); font-size: 13px; margin-top: 4px; }
+  .card {
+    margin-top: 26px; background: #fff; border-radius: 16px; padding: 22px 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.06);
+  }
+  .card p { font-size: 15.5px; margin: 0; color: #2a2d31; }
+  .hl { background: var(--accent-soft); border-radius: 8px; padding: 2px 7px; font-weight: 600; }
+  .links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+  .link {
+    flex: 1 1 220px; display: block; text-decoration: none; color: inherit;
+    background: #fff; border: 1px solid var(--line); border-radius: 14px;
+    padding: 16px 20px; transition: border-color .15s, transform .15s;
+  }
+  .link:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .link b { display: block; font-size: 15.5px; color: var(--accent); }
+  .link span { display: block; font-size: 13px; color: var(--muted); margin-top: 2px; }
+  footer { margin-top: 40px; color: #8a8d91; font-size: 12px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="brand">
+    <div class="logo">D</div>
+    <div>
+      <h1>DanceSense 舞蹈标准度测试</h1>
+      <div class="sub">Dance Accuracy Test · 端侧评分 / on-device scoring</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <p>选一段自己的视频，App 在本机提取人体骨架，与标准示范逐帧对齐，
+    给出 <span class="hl">0–100 的标准度分数</span>、分部位误差和最需要改进的关节。
+    全部分析在设备本地完成，视频不会离开你的手机。</p>
+  </div>
+
+  <div class="links">
+    <a class="link" href="./support.html">
+      <b>技术支持 · Support</b>
+      <span>上手步骤、常见问题、联系邮箱</span>
+    </a>
+    <a class="link" href="./privacy.html">
+      <b>隐私政策 · Privacy Policy</b>
+      <span>收集了什么、数据在哪处理、试用与买断</span>
+    </a>
+  </div>
+
+  <footer>© 2026 Xingran Xu · DanceSense 舞蹈标准度测试 / Dance Accuracy Test</footer>
+</div>
+</body>
+</html>
