@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DanceSense 舞蹈标准度测试 · 技术支持</title>
+<style>
+  :root {
+    color-scheme: light;
+    --accent: #7c3aed;
+    --accent-soft: #f3e8ff;
+    --ink: #1c1e21;
+    --muted: #65676b;
+    --line: #e7e9ec;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #f6f7f9; color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans",
+                 "Noto Sans Thai", "Apple SD Gothic Neo", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.78; -webkit-font-smoothing: antialiased;
+  }
+  .page { max-width: 760px; margin: 0 auto; padding: 24px 18px 72px; }
+  header { margin-bottom: 18px; }
+  .brand { display: flex; align-items: center; gap: 10px; }
+  .logo {
+    width: 40px; height: 40px; border-radius: 12px; flex: none;
+    background: linear-gradient(135deg, #a855f7, #7c3aed);
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-size: 20px; font-weight: 700;
+  }
+  h1 { font-size: 24px; margin: 0; letter-spacing: .2px; }
+  .sub { color: var(--muted); font-size: 13px; margin-top: 6px; }
+  .langbar { display: flex; gap: 8px; margin: 18px 0 20px; }
+  .langbar button {
+    font: inherit; font-size: 13px; font-weight: 600; cursor: pointer;
+    padding: 7px 16px; border-radius: 999px; border: 1px solid var(--line);
+    background: #fff; color: var(--muted);
+  }
+  .langbar button.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .card {
+    background: #fff; border-radius: 14px; padding: 18px 22px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.06); font-size: 15px;
+  }
+  .hl { background: var(--accent-soft); border-radius: 8px; padding: 2px 7px; font-weight: 600; }
+  h2 {
+    font-size: 18px; margin: 34px 0 8px; padding-left: 11px;
+    border-left: 4px solid var(--accent);
+  }
+  p, li { font-size: 15px; }
+  ul, ol { padding-left: 22px; margin: 8px 0; }
+  li { margin: 5px 0; }
+  .faq {
+    background: #fff; border: 1px solid var(--line); border-radius: 12px;
+    padding: 13px 18px; margin: 10px 0;
+  }
+  .faq h3 { font-size: 15px; margin: 0 0 4px; }
+  .faq p { margin: 0; font-size: 14.5px; color: #2a2d31; }
+  a { color: var(--accent); }
+  .nav { display: flex; gap: 14px; margin-top: 10px; font-size: 13px; }
+  .nav a { text-decoration: none; font-weight: 600; }
+  .footlink { margin-top: 40px; text-align: center; font-size: 13px; }
+  .footlink a { text-decoration: none; font-weight: 600; }
+  footer { margin-top: 16px; color: #8a8d91; font-size: 12px; text-align: center; }
+  .en { display: none; }
+  body[data-lang="en"] .zh { display: none; }
+  body[data-lang="en"] .en { display: block; }
+</style>
+</head>
+<body data-lang="zh">
+<div class="page">
+
+  <header>
+    <div class="brand">
+      <div class="logo">D</div>
+      <div>
+        <h1>DanceSense 舞蹈标准度测试</h1>
+        <div class="sub">技术支持 · Support</div>
+        <div class="nav"><a href="./index.html">首页</a><a href="./privacy.html">隐私政策 · Privacy</a></div>
+      </div>
+    </div>
+    <div class="langbar">
+      <button class="active" data-set="zh">中文</button>
+      <button data-set="en">English</button>
+    </div>
+  </header>
+
+  <!-- ==================== 中文 ==================== -->
+  <div class="zh">
+    <div class="card">
+      <p>DanceSense 用你手机上的计算能力给舞蹈打分：选一段自己的视频，App 在本机提取人体骨架，
+      和内置标准示范逐帧对齐，输出 <span class="hl">0–100 的标准度分数</span>、分部位误差和最需要改进的关节。
+      所有处理都在设备本地完成，视频不会离开你的手机。</p>
+    </div>
+
+    <h2>三步上手</h2>
+    <ol>
+      <li>首页选「<b>标准度测试</b>」（与内置标准示范对比）或「<b>舞蹈视频分析</b>」（分析你自己的视频）。</li>
+      <li>点「选择视频」，挑一段<b>单人、全身入镜、竖屏</b>的片段。</li>
+      <li>等报告出来：总分与分级、各部位误差条、最差关节清单，还可以在结果页生成<b>成绩卡</b>分享。</li>
+    </ol>
+
+    <h2>常见问题</h2>
+
+    <div class="faq"><h3>分数是怎么算的？</h3>
+      <p>App 用 Apple Vision 在设备上提取每帧的 17 个人体关键点，把你的动作序列与标准示范做 DTW 时间对齐，
+      再逐关节比较角度与位置误差并加权成 0–100 分，同时给出「高度一致 / 较为接近 / 差异较大」等分级。</p></div>
+
+    <div class="faq"><h3>我的视频会被上传吗？</h3>
+      <p>不会。骨架提取、模型推理、对齐和评分全部在设备本地完成，App 没有服务器，也不含第三方统计或广告 SDK。详见<a href="./privacy.html">隐私政策</a>。</p></div>
+
+    <div class="faq"><h3>提示「未检测到完整人体」或分数很低怎么办？</h3>
+      <p>通常是取景问题。请保证：画面里只有你一个人、头和脚都在框内、身体不要被裁切、尽量竖屏正对镜头、
+      光线充足且避免强逆光。多人同框、半身入镜、横屏远景都会让骨架提取失败或严重失真。</p></div>
+
+    <div class="faq"><h3>视频里有前奏、走位或结尾鞠躬，会影响分数吗？</h3>
+      <p>会。对齐是基于整段视频的，多余的动作会被当成错误匹配。建议在相册里先把真正跳舞的那一段剪出来再选择
+      （十几秒到一分钟最合适），分数会更贴近真实水平。</p></div>
+
+    <div class="faq"><h3>试用期多久？怎么解锁？</h3>
+      <p>首次打开有 <b>3 天免费试用</b>，启动页有实时倒计时。试用结束后可一次性买断 <b>US$0.99</b> 解锁全部功能，
+      <b>无订阅、无自动续费</b>。试用或未解锁状态下，内置示例依然可以完整体验一遍分析与报告。</p></div>
+
+    <div class="faq"><h3>换了手机，买断还在吗？</h3>
+      <p>在。用同一个 Apple ID 登录，打开买断页点「<b>恢复购买</b>」即可找回，不需要重新付费。</p></div>
+
+    <div class="faq"><h3>买断页显示 US$0.99 而不是本地货币？</h3>
+      <p>说明暂时没取到 App Store 的商品信息。确认网络后重新进入买断页再试一次；已购用户会看到「已解锁」。</p></div>
+
+    <div class="faq"><h3>支持哪些语言？</h3>
+      <p>简体中文、繁體中文、English、日本語、한국어、ไทย、Монгол 共 7 种，在首页的「语言」入口里可以随时切换。</p></div>
+
+    <div class="faq"><h3>练习记录存在哪里？能删除吗？</h3>
+      <p>只存在你的设备上（App 的 Application Support 目录），用来生成历史列表和进步曲线。可以在记录页删除单条记录；
+      卸载 App 会一并清除。</p></div>
+
+    <div class="faq"><h3>怎么申请退款？</h3>
+      <p>访问 <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>，退款由 Apple 直接处理，开发者无法代办。</p></div>
+
+    <div class="faq"><h3>遇到问题或有建议？</h3>
+      <p>发邮件到 <a href="mailto:xingran0720@gmail.com">xingran0720@gmail.com</a>，请附上机型、系统版本、App 版本号和复现步骤，
+      有截图或原视频片段更好定位。</p></div>
+
+    <div class="footlink"><a href="./index.html">首页 · Home</a> · <a href="./privacy.html">隐私政策 · Privacy</a></div>
+    <footer>© 2026 Xingran Xu · DanceSense 舞蹈标准度测试 / Dance Accuracy Test · 最后更新 2026 年 11 月 16 日</footer>
+  </div>
+
+  <!-- ==================== English ==================== -->
+  <div class="en">
+    <div class="card">
+      <p>DanceSense scores your dancing with the computing power already in your phone. Pick a video, and the app
+      extracts body poses on-device, aligns them frame by frame against a built-in reference routine, and returns a
+      <span class="hl">0–100 accuracy score</span>, per-body-part errors, and the joints that need the most work.
+      Everything runs locally — your video never leaves the device.</p>
+    </div>
+
+    <h2>Getting started</h2>
+    <ol>
+      <li>On the home screen choose <b>Accuracy Test</b> (compare against the built-in reference) or <b>Dance Video Analysis</b> (analyse your own clip).</li>
+      <li>Tap <b>Choose Video</b> and pick a clip that shows <b>one person, full body, in portrait</b>.</li>
+      <li>Read the report: total score and grade, per-part error bars, the worst joints, plus a shareable <b>score card</b>.</li>
+    </ol>
+
+    <h2>FAQ</h2>
+
+    <div class="faq"><h3>How is the score computed?</h3>
+      <p>Apple Vision extracts 17 body keypoints on-device. Your motion sequence is time-aligned to the reference with DTW,
+      then joint angles and positions are compared, weighted, and turned into a 0–100 score with a qualitative grade
+      (highly consistent / close / noticeably different).</p></div>
+
+    <div class="faq"><h3>Is my video uploaded anywhere?</h3>
+      <p>No. Pose extraction, model inference, alignment and scoring all happen on-device; there is no server and no
+      analytics or advertising SDK. See the <a href="./privacy.html">privacy policy</a>.</p></div>
+
+    <div class="faq"><h3>It says no full body was detected, or the score is very low.</h3>
+      <p>That is usually framing. Make sure only you are in frame, head to feet are visible, nothing is cropped,
+      hold the camera in portrait facing you, and use good light without strong backlight. Several people, a half-body
+      shot, or a wide landscape shot will break pose extraction.</p></div>
+
+    <div class="faq"><h3>My clip has an intro, walking around, or a bow at the end.</h3>
+      <p>Those parts distort the score, because alignment covers the whole clip. Trim the clip down to the part where you
+      actually dance (roughly 15 seconds to one minute) before selecting it.</p></div>
+
+    <div class="faq"><h3>How long is the trial, and how do I unlock?</h3>
+      <p>A <b>3-day free trial</b> starts on first launch, with a live countdown. Afterwards a <b>one-time US$0.99</b> purchase
+      unlocks everything — <b>no subscription, no auto-renewal</b>. The built-in demo clips can always be analysed in full,
+      even during the trial or without a purchase.</p></div>
+
+    <div class="faq"><h3>I changed phones — is my purchase still valid?</h3>
+      <p>Yes. Sign in with the same Apple ID, open the unlock page and tap <b>Restore Purchases</b>.</p></div>
+
+    <div class="faq"><h3>The unlock page shows US$0.99 instead of my currency.</h3>
+      <p>Product info could not be loaded. Check your connection and reopen the unlock page; owners will see it as unlocked.</p></div>
+
+    <div class="faq"><h3>Which languages are supported?</h3>
+      <p>Simplified Chinese, Traditional Chinese, English, Japanese, Korean, Thai and Mongolian — seven in total,
+      switchable from the Language entry on the home screen.</p></div>
+
+    <div class="faq"><h3>Where is my practice history stored?</h3>
+      <p>Only on your device, in the app's Application Support folder, and used solely for the history list and progress
+      chart. You can delete entries in the app; uninstalling removes the rest.</p></div>
+
+    <div class="faq"><h3>How do I get a refund?</h3>
+      <p>Visit <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. Refunds are handled by Apple; the
+      developer cannot issue them.</p></div>
+
+    <div class="faq"><h3>Questions or feedback?</h3>
+      <p>Email <a href="mailto:xingran0720@gmail.com">xingran0720@gmail.com</a> with your device model, OS version, app
+      version and steps to reproduce — a screenshot or the original clip helps a lot.</p></div>
+
+    <div class="footlink"><a href="./index.html">Home</a> · <a href="./privacy.html">Privacy Policy</a></div>
+    <footer>© 2026 Xingran Xu · DanceSense / Dance Accuracy Test · Last updated November 16, 2026</footer>
+  </div>
+</div>
+
+<script>
+  const body = document.body;
+  document.querySelectorAll('.langbar button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      body.dataset.lang = btn.dataset.set;
+      document.querySelectorAll('.langbar button').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      try { localStorage.setItem('dsSupportLang', btn.dataset.set); } catch (e) {}
+    });
+  });
+  try {
+    const saved = localStorage.getItem('dsSupportLang');
+    if (saved === 'en' || saved === 'zh') {
+      body.dataset.lang = saved;
+      document.querySelectorAll('.langbar button').forEach(function (b) {
+        b.classList.toggle('active', b.dataset.set === saved);
+      });
+    }
+  } catch (e) {}
+</script>
+</body>
+</html>
